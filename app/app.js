@@ -76,7 +76,8 @@ app.post("/api/rename-pokemon", checkNameKey, (req, res) => {
 		console.log(`has rename count? ${renameCount}`);
 	}
 	res.json({
-		newName: request.name + "-" + fibonacci,
+		name: request.name,
+		suffix: `-${fibonacci}`,
 		count: renameCount + 1,
 	});
 });
